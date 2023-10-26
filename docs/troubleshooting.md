@@ -1,0 +1,58 @@
+---
+sidebar_position: 7
+---
+
+# Troubleshooting
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+## Cannot connect to "device name", device is already in use by another ADB client.
+
+Only one program can access the device at a time. If there is already another program using the device, Tango can't open it and you get this error.
+
+On computers, Google ADB is the most common program that may be using the device, and other programs may include Google ADB to access Android devices. Tango doesn't use Google ADB, and can't work together with it.
+
+To stop it, follow these steps:
+
+<Tabs groupId="os">
+
+<TabItem value="windows" label="Windows">
+
+1. If you know which program may be accessing the device, close it first.
+2. Right click on the empty space of the taskbar, and select "Task Manager".
+3. In the "Processes" tab, find `adb.exe` or `adb.exe *32` in the "Name" column. then adb is already exited after step 1.
+4. Right click on it, and select "End task".
+
+If the `adb.exe` process comes back after you close it, then some program is repeatedly starting it. You must find and close that program first.
+
+</TabItem>
+
+<TabItem value="mac" label="macOS">
+
+1. If you know which program may be accessing the device, close it first.
+2. Open Spotlight by pressing `⌘` + `Space`.
+3. Type `Activity Monitor` and press `Enter`.
+4. In the "Processes" tab, find `adb`. If there aren't any, then adb is already exited after step 1.
+5. Select it, and click the "X" button on the top left corner.
+
+If the `adb` process comes back after you close it, then some program is repeatedly starting it. You must find and close that program first.
+
+</TabItem>
+
+<TabItem value="linux" label="Linux">
+
+1. If you know which program may be accessing the device, close it first.
+2. Open a terminal.
+3. Type `killall adb`. If it says "adb: no process found", then adb is already exited after step 1.
+4. Run `ps aux | grep adb`, if it doesn't show any output, then you have successfully stopped adb.
+
+If the "adb" process is still there, then some program is repeatedly starting it. You must find and close that program first.
+
+</TabItem>
+
+</Tabs>
+
+## Cannot connect to "device name", access denied
+
+We have acknowledged that this error is happening to some Linux users, but we need more information to solve it. If you are experiencing this error, please provide your distribution name, browser name, browser version, and browser installation method to https://github.com/yume-chan/ya-webadb/issues/591.
