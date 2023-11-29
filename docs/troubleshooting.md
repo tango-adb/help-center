@@ -1,5 +1,5 @@
 ---
-sidebar_position: 7
+sidebar_position: 9
 ---
 
 # Troubleshooting
@@ -7,11 +7,11 @@ sidebar_position: 7
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-## Cannot connect to "device name", device is already in use by another ADB client.
+## Device is in use by another program
 
 Only one program can access the device at a time. If there is already another program using the device, Tango can't open it and you get this error.
 
-On computers, Google ADB is the most common program that may be using the device, and other programs may include Google ADB to access Android devices. Tango doesn't use Google ADB, and can't work together with it.
+On computers, Google ADB is the most common program that may be using the device, and other programs may bundle Google ADB to access Android devices. Tango doesn't use Google ADB, and can't work together with it.
 
 To stop it, follow these steps:
 

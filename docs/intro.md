@@ -5,7 +5,7 @@ slug: /
 
 # Introduction
 
-Tango is a Web app for controlling Android devices. It's built on the open-sourced [Tango library](https://github.com/yume-chan/ya-webadb).
+[Tango](https://tangoapp.dev) is a Web app for controlling Android devices. It's built on the open-sourced [Tango library](https://github.com/yume-chan/ya-webadb).
 
 Tango works on latest versions of Chromium-based browsers, including Google Chrome, Microsoft Edge and Opera. It also works on Android versions of those browsers, but not on iOS devices.
 
@@ -20,9 +20,8 @@ After first loading the page, Tango can work offline. You can disconnect from th
 1. [Enable Developer options and USB debugging](./prepare.md) on the device you want to control.
 2. Connect the device to your computer using a USB cable. For running Tango on Android, use a C-to-C or OTG cable, Tango can't control the device from itself.
 3. Open [Tango](https://tangoapp.dev) in a supported browser on your computer.
-4. Tap "Pair Device" button, from the popup, select the device you want to control.
-5. A new device card will appear in the device list. Tap "Connect" button on the card to connect to the device.
-6. The first time you connect to a device, you will be asked to authorize the connection on the device. Follow the instructions on the device to authorize the connection.
+4. Follow on-screen instructions to pair the device. If the device is not detected, make sure you have enabled USB debugging and connected the device to your computer.
+5. The first time you connect to a device, you will be asked to authorize the connection on the device. Follow the instructions on the device.
 
 Having issues while connecting? See [Troubleshooting](./troubleshooting.md).
 
