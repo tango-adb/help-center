@@ -36,13 +36,25 @@ In **Video** section, check **Limit Resolution** and **Limit FPS** to enable the
 
 ### Forward audio
 
-On Android 11 or higher, Tango can forward audio from the device to your computer. However, there are some limitations:
+On Android 11 or higher, Tango can forward audio from the device to your computer. There are two options:
 
-* Only audio produced by apps will be forwarded. Ringtone, notification, alarms and call voice will not be forwarded.
-* It doesn't work if a wired or Bluetooth headset is connected to the device.
-* The audio is only played on your computer. It will not be played on the device.
+#### Play internal audio on ...
 
-To enable this, check **Enable Audio Forwarding** option in **Audio** section.
+Forwards internal audio (from apps) to computer. It has three values:
+
+* **Device**: Disable audio forwarding. Internal audio is played on the device normally.
+* **Tango**: Forward internal audio to computer.
+* **Both**: Play internal audio on both device and computer.
+
+Due to Android system restrictions, internal audio forwarding doesn't work if a wired or Bluetooth headset is connected. Also, notifications, alarms, and phone ringtone can't be forwarded and will always play only on the device.
+
+When choosing **Both**, Tango will play captured audio through notification channel, so the volume is controlled both by the **Media** volume and **Notification** volume. If the sound on device is too quiet, try increasing both volumes.
+
+#### Forward microphone
+
+Captures device microphone input and play it on computer.
+
+Internal audio forwarding and microphone forwarding can be enabled at the same time.
 
 ## Usage
 
