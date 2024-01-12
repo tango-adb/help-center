@@ -6,7 +6,7 @@ sidebar_position: 7
 
 Screen mirror page allows you to see the device screen in real time, and control the device using mouse and keyboard.
 
-## Options
+## Video
 
 ### Create virtual display
 
@@ -34,11 +34,11 @@ If your device or computer is not powerful enough, reducing resolution and frame
 
 In **Video** section, check **Limit Resolution** and **Limit FPS** to enable them. The **Max Resolution** option limits the resolution by its longer side while keeping the aspect ratio. For example, if device resolution is 1920x1080, and **Max Resolution** is set to 720, the resolution will be limited to 1280x720. The **Max FPS** option limits the frame rate.
 
-### Forward audio
+## Audio
 
 On Android 11 or higher, Tango can forward audio from the device to your computer. There are two options:
 
-#### Play internal audio on ...
+### Play internal audio on ...
 
 Forwards internal audio (from apps) to computer. It has three values:
 
@@ -50,36 +50,55 @@ Due to Android system restrictions, internal audio forwarding doesn't work if a 
 
 When choosing **Both**, Tango will play captured audio through notification channel, so the volume is controlled both by the **Media** volume and **Notification** volume. If the sound on device is too quiet, try increasing both volumes.
 
-#### Forward microphone
+### Forward microphone
 
 Captures device microphone input and play it on computer.
 
 Internal audio forwarding and microphone forwarding can be enabled at the same time.
 
-## Usage
+## Control
 
 ### Mouse
 
 The mouse inputs are translated to touch events on the device. You can use mouse to tap, drag, scroll, and zoom.
 
-Some apps (like Chrome for Android) can also responds to right clicks and mouse wheel, but most apps are only designed for touch input, so they will not behave correctly.
+Some apps (like Chrome for Android) can also responds to right clicks and mouse wheel, but most apps are only designed for touch input, so all buttons behave like left click.
 
 ### Keyboard
 
 The keyboard inputs are sent to the device as is. Except:
 
-* Some keys are handled by the computer itself, like the **Windows** key on Windows.
-* Android only supports key code in US layout keyboards. To type other characters, you need to use the IME on the device.
+* When in full screen mode, some system-critical keys and shortcuts are handled by local OS and not forwarded to the device, for example:
+  * **Command + Tab** on macOS: Switch between windows.
+  * **Command + Q** on macOS: Quit the current app.
+  * **Windows + L** on Windows: Lock the computer.
+  * **Control + Alt + Delete** on Windows: Open task manager.
+* When not in full screen mode, in additional to the above keys, more keys and shortcuts will be handled by local OS or Web browser, for example:
+  * **Windows** key on Windows: Open Start menu.
+  * **Ctrl/Command + W**: Close current tab.
+  * **Ctrl/Command + N**: Open new browser window.
+
+The **Windows/Command/Super** key becomes the Search key on Android (also known as the OS key in some ROMs). To see a list of supported shortcuts, press **Search + /** on the device.
+
+### Simulate physical keyboard
+
+By default, Tango uses Android's built-in virtual keyboard for sending keyboard inputs. When enabled from the **Control** section, Tango can also simulate a physical keyboard, which has the following advantages:
+
+* The on-screen virtual keyboard won't show up when you type. This gives you more screen space, but also means you can't type on the device directly.
+* The keyboard layout is configurable at **Settings → System → Languages and input → Physical keyboard**. You can choose a layout that matches your physical keyboard.
+* It's more compatible with apps that don't respond to virtual keyboard inputs, including some IMEs and games.
 
 ### Touch
 
 If your computer (or tablet) has a touch screen, you can use it to control the device. The touch inputs are sent to the device as is. Multi-touch is also supported.
 
+### Game controller
+
+Game controllers connected to the computer can be used to control the device. The controller inputs are sent to the device as is. It should work in games that support game controllers natively, like Minecraft, and emulators like PPSSPP.
+
 ### App switcher
 
-If enabled in the **Panels** section, an app switcher will be displayed on the top side of the screen.
-
-It shows the list of running apps on the current display (either physical or virtual). Tap on an app to switch to it.
+On the left side of the screen there is the app switcher. It lists all running apps on the current display (either physical or virtual). You can tap an app to quickly switch to it.
 
 ## Troubleshooting
 
@@ -88,6 +107,10 @@ It shows the list of running apps on the current display (either physical or vir
 For privacy, security or copyright protection reasons, apps can prevent screen to be captured. This will result in a black screen in Tango, and there is nothing we can do.
 
 While you can't see the screen content, you can still control the device using mouse and keyboard. For example, you can use keyboard to enter the PIN to unlock the device.
+
+### Can't control XiaoMi devices
+
+In developer options, XiaoMi devices have a **USB debugging (Security settings)** option. It needs to be enabled for controlling the device.
 
 ## Tricks
 
