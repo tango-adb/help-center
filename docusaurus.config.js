@@ -55,6 +55,9 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: "GTM-WLRVJGCF",
+        },
       }),
     ],
   ],
@@ -85,8 +88,39 @@ const config = {
       },
       footer: {
         style: 'dark',
-        links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} Tango ADB. Built with Docusaurus.`,
+        links: [
+          {
+            title: "Links",
+            items: [
+              {
+                label: "Tango Web App",
+                href: "https://app.tangoapp.dev",
+              },
+              {
+                label: "OpenCollective",
+                href: "https://opencollective.com/ya-webadb",
+              },
+            ],
+          },
+          {
+            title: "Community",
+            items: [
+              {
+                label: "GitHub",
+                href: "https://github.com/yume-chan/ya-webadb",
+              },
+              {
+                label: "Reddit",
+                href: "https://www.reddit.com/r/tango_adb",
+              },
+              {
+                label: "Discord",
+                href: "https://discord.gg/26k3ttC2PN",
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © 2021-${new Date().getFullYear()} Tango ADB. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
