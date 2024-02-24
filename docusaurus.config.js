@@ -1,8 +1,170 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import { themes } from "prism-react-renderer";
+
+const lightTheme = {
+  ...themes.github,
+  styles: [
+    ...themes.github.styles,
+    {
+      types: ["title"],
+      style: {
+        color: "#0550AE",
+        fontWeight: "bold",
+      },
+    },
+    {
+      types: ["parameter"],
+      style: {
+        color: "#953800",
+      },
+    },
+    {
+      types: ["boolean", "rule", "color", "number", "constant", "property"],
+      style: {
+        color: "#005CC5",
+      },
+    },
+    {
+      types: ["atrule", "tag"],
+      style: {
+        color: "#22863A",
+      },
+    },
+    {
+      types: ["script"],
+      style: {
+        color: "#24292E",
+      },
+    },
+    {
+      types: ["operator", "unit", "rule"],
+      style: {
+        color: "#D73A49",
+      },
+    },
+    {
+      types: ["font-matter", "string", "attr-value"],
+      style: {
+        color: "#C6105F",
+      },
+    },
+    {
+      types: ["class-name"],
+      style: {
+        color: "#116329",
+      },
+    },
+    {
+      types: ["attr-name"],
+      style: {
+        color: "#0550AE",
+      },
+    },
+    {
+      types: ["keyword"],
+      style: {
+        color: "#CF222E",
+      },
+    },
+    {
+      types: ["function"],
+      style: {
+        color: "#8250DF",
+      },
+    },
+    {
+      types: ["selector"],
+      style: {
+        color: "#6F42C1",
+      },
+    },
+    {
+      types: ["variable"],
+      style: {
+        color: "#E36209",
+      },
+    },
+    {
+      types: ["comment"],
+      style: {
+        color: "#6B6B6B",
+      },
+    },
+  ],
+};
+
+const darkTheme = {
+  plain: {
+    color: "#D4D4D4",
+    backgroundColor: "#212121",
+  },
+  styles: [
+    ...themes.vsDark.styles,
+    {
+      types: ["title"],
+      style: {
+        color: "#569CD6",
+        fontWeight: "bold",
+      },
+    },
+    {
+      types: ["property", "parameter"],
+      style: {
+        color: "#9CDCFE",
+      },
+    },
+    {
+      types: ["script"],
+      style: {
+        color: "#D4D4D4",
+      },
+    },
+    {
+      types: ["boolean", "arrow", "atrule", "tag"],
+      style: {
+        color: "#569CD6",
+      },
+    },
+    {
+      types: ["number", "color", "unit"],
+      style: {
+        color: "#B5CEA8",
+      },
+    },
+    {
+      types: ["font-matter"],
+      style: {
+        color: "#CE9178",
+      },
+    },
+    {
+      types: ["keyword", "rule"],
+      style: {
+        color: "#C586C0",
+      },
+    },
+    {
+      types: ["regex"],
+      style: {
+        color: "#D16969",
+      },
+    },
+    {
+      types: ["maybe-class-name"],
+      style: {
+        color: "#4EC9B0",
+      },
+    },
+    {
+      types: ["constant"],
+      style: {
+        color: "#4FC1FF",
+      },
+    },
+  ],
+};
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -31,6 +193,28 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  markdown: {
+    mdx1Compat: {
+      admonitions: false,
+      comments: false,
+      headingIds: false,
+    },
+    mermaid: true,
+  },
+
+  themes: [
+    "@docusaurus/theme-mermaid",
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {Record<string, unknown>} */ (
+        /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */ ({
+          docsRouteBasePath: "/",
+          highlightSearchTermsOnTargetPage: true,
+        })
+      ),
+    ],
+  ],
 
   presets: [
     [
@@ -81,7 +265,7 @@ const config = {
           // { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/tango-adb/help-center',
-            label: 'GitHub',
+            label: 'Source code',
             position: 'right',
           },
         ],
@@ -123,8 +307,8 @@ const config = {
         copyright: `Copyright © 2021-${new Date().getFullYear()} Tango ADB. Built with Docusaurus.`,
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: lightTheme,
+        darkTheme: darkTheme,
       },
     }),
 };
