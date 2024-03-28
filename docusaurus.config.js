@@ -276,7 +276,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       announcementBar: {
-        id: 'announce-1',
+        id: 'announce-2',
         content: '📢 Join our <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/26k3ttC2PN">Discord server</a> to check latest announcements and roadmap!',
       },
       footer: {
