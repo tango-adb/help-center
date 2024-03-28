@@ -1,0 +1,39 @@
+---
+sidebar_position: 0
+---
+
+# Screen Mirror
+
+Screen mirror page allows you to see the device screen in real time, and control the device using mouse and keyboard.
+
+Check the left navigation for more information on how to control the device, create virtual displays, mirror cameras, and troubleshoot common issues.
+
+## Video
+
+* Source: Choose the source of the video. It can be the device screen, a [virtual display](./virtual.mdx), or a [camera](./camera.mdx). Depending on the source, different options are available.
+* Codec: On supported device and browser, use H.265 codec can improve video quality and reduce latency. If the device or the browser doesn't support H.265, the option will be disabled.
+* Encoder: Choose the video encoder. **Default** will automatically choose the best encoder based on the device and browser. Some devices may ship with a buggy encoder, in which case you can try another one.
+* Bitrate: The video bitrate in bps. Higher bitrate means better video quality, but also higher resource usage and latency. If the video is laggy, try reducing the bitrate.
+* Resolution: The video resolution. Higher resolution means better video quality, but also higher resource usage and latency. If the video is laggy, try reducing the resolution.
+
+## Audio
+
+On Android 11 or higher, Tango can forward audio from the device to your computer. There are two options:
+
+### Play internal audio on ...
+
+Forwards internal audio (from apps) to computer. It has three values:
+
+* **Device**: Disable audio forwarding. Internal audio is played on the device normally.
+* **Tango**: Forward internal audio to computer.
+* **Both**: Play internal audio on both device and computer.
+
+Due to Android system restrictions, internal audio forwarding doesn't work when a wired or Bluetooth headset is connected. Also, notifications, alarms, and phone ringtone can't be forwarded and will always play only on the device.
+
+When choosing **Both**, Tango will play captured audio through notification channel, so the volume is controlled both by the **Media** volume and **Notification** volume. If the sound on device is too quiet, try increasing both volumes.
+
+### Forward microphone
+
+Captures device microphone input and play it on computer.
+
+Internal audio forwarding and microphone forwarding can be enabled at the same time.

@@ -1,0 +1,47 @@
+---
+sidebar_position: 3
+---
+
+# Control the device
+
+## Mouse
+
+The mouse inputs are translated to touch events on the device. You can use mouse to tap, drag, scroll, and zoom.
+
+Some apps (like Chrome for Android) can also responds to right clicks and mouse wheel, but most apps are only designed for touch input, so all buttons behave like left click.
+
+## Keyboard
+
+The keyboard inputs are sent to the device as is. Except:
+
+* When in full screen mode, some system-critical keys and shortcuts are handled by local OS and not forwarded to the device, for example:
+  * **Command + Tab** on macOS: Switch between windows.
+  * **Command + Q** on macOS: Quit the current app.
+  * **Windows + L** on Windows: Lock the computer.
+  * **Control + Alt + Delete** on Windows: Open task manager.
+* When not in full screen mode, in additional to the above keys, more keys and shortcuts will be handled by local OS or Web browser, for example:
+  * **Windows** key on Windows: Open Start menu.
+  * **Ctrl/Command + W**: Close current tab.
+  * **Ctrl/Command + N**: Open new browser window.
+
+The **Windows/Command/Super** key becomes the Search key on Android (also known as the OS key in some ROMs). To see a list of supported shortcuts, press **Search + /** on the device.
+
+## Simulate physical keyboard
+
+By default, Tango uses Android's built-in virtual keyboard for sending keyboard inputs. When enabled from the **Control** section, Tango can also simulate a physical keyboard, which has the following advantages:
+
+* The on-screen virtual keyboard won't show up when you type. This gives you more screen space, but also means you can't type on the device directly.
+* The keyboard layout is configurable at **Settings → System → Languages and input → Physical keyboard**. You can choose a layout that matches your physical keyboard.
+* It's more compatible with apps that don't respond to virtual keyboard inputs, including some IMEs and games.
+
+## Touch
+
+If your computer (or tablet) has a touch screen, you can use it to control the device. The touch inputs are sent to the device as is. Multi-touch is also supported.
+
+## Game controller
+
+Game controllers connected to the computer can be used to control the device. The controller inputs are sent to the device as is. It should work in games that support game controllers natively, like Minecraft, and emulators like PPSSPP.
+
+## App switcher
+
+On the left side of the screen there is the app switcher. It lists all running apps on the current display (either physical or virtual). You can tap an app to quickly switch to it.

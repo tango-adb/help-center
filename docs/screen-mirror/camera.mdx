@@ -1,0 +1,23 @@
+---
+sidebar_position: 1
+---
+
+# Mirror Cameras
+
+import Pro from './_pro.tsx';
+
+<Pro/>
+
+On Android 12 and higher, Tango can mirror the camera instead, so you don't need to open the camera app, and there will be no camera UI on the screen.
+
+To mirror a camera, scroll to **Video** section, then change **Source** to **Camera**.
+
+When **Camera** is selected in **Source**, the following options are available:
+
+* **Camera**: Choose between the front and back camera. The list contains the ID, position, and resolution of each camera. Sadly, it's not possible to know the type of the camera (normal, micro, ultra-wide, etc.) so you may need to try each camera to find the one you want.
+
+Cameras usually have very high resolutions, so they require more hardware resources to capture, encode, and playback. If the video is laggy or the device is overheating, try reducing the resolution or bitrate.
+
+## Mirror multiple cameras at the same time
+
+Due to Android system and hardware limitations, only one camera can be mirrored at a time. When a camera is mirrored, other apps can't access the camera, including the camera app itself. If you need to use the camera app, you need to stop mirroring the camera first.
