@@ -1,0 +1,33 @@
+---
+authors: simon
+---
+
+# New features in 2024-04-14
+
+We are happy to announce some new features for everyone:
+
+## Record your screen in screen mirror
+
+With the new <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style={{verticalAlign:"middle"}} viewBox="0 0 16 16"><path fill="currentColor" d="M8 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8ZM8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM2 8a6 6 0 1 1 12 0A6 6 0 0 1 2 8Z"></path></svg> **Record** button in the command bar, you can record the display and audio of your device while screen mirroring. The recording will be saved as a video file and be downloaded to your PC automatically.
+
+Tango can record the video without transcoding, so the quality is the same as the screen mirror itself, and it almost has no impact on the performance.
+
+When internal audio or forward microphone options are enabled, the audio will be recorded as well. If both options are enabled, they will be recorded into separate audio tracks. You may need a video player that supports multiple audio tracks to select between them.
+
+## Terminal emulator/ADB shell
+
+In the **Advanced** page, there is now a new **Terminal** link. It opens a terminal emulator that allows you to run shell commands on the device. It is useful for debugging and advanced users.
+
+:::warning
+
+Be careful of the commands you run in the terminal. Running incorrect commands may cause permanent data loss or damage to the device.
+
+:::
+
+This terminal is same as running `adb shell` on your PC. It can run the same shell commands as `adb shell`.
+
+If you see a command that starts with `adb shell`, for example, `adb shell pm list packages`, you must only input `pm list packages` in the terminal.
+
+## End
+
+Remember to join our [Discord server](https://discord.gg/26k3ttC2PN) to get the latest news, check the public roadmap, and let us know your feedback. We are looking forward to hearing from you!
