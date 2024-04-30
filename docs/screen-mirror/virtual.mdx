@@ -8,16 +8,32 @@ import Pro from './_pro.tsx';
 
 <Pro/>
 
-On Android 11 and higher, Tango can create and mirror a virtual display. Virtual displays are similar to connecting multiple displays to the device. It can run apps and accept inputs independently from the main display, allowing you to use multiple apps at the same time.
+Android devices support connecting multiple displays via USB-C or Miracast, each display can show different content and accept touch input independently, allowing you to use multiple apps at the same time.
+
+On Android 11 and higher, Tango can create and mirror virtual displays, which is very similar to connecting a physical display to the device.
 
 To mirror a virtual display, scroll to **Video** section, then change **Source** to **Virtual**.  You can also customize the resolution and density of the virtual display below.
 
+## App launcher and app switcher
+
+On Android 13 and lower, due to system restrictions, your default app launcher and app switcher will not work on virtual displays. Instead, Tango provides a simple app launcher and app switcher for you.
+
+The app launcher should open automatically when there is no app running on the virtual display. You can also open it by tapping the <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style={{verticalAlign:"middle"}} viewBox="0 0 16 16"><path fill="currentColor" d="M8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12Zm0-1A5 5 0 1 1 8 3a5 5 0 0 1 0 10Z"></path></svg> button in the command bar.
+
+To hide the app launcher, tap the <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style={{verticalAlign:"middle"}} viewBox="0 0 16 16" ><path fill="currentColor" d="M1.777 9.313a1.5 1.5 0 0 1 0-2.629l9.999-5.499A1.5 1.5 0 0 1 13.999 2.5v10.999a1.5 1.5 0 0 1-2.223 1.314l-9.999-5.5Zm.482-1.752a.5.5 0 0 0 0 .876l9.999 5.499a.5.5 0 0 0 .74-.438V2.499a.5.5 0 0 0-.74-.438l-9.999 5.5Z"></path></svg> button in the command bar.
+
+The [app switcher](./control.mdx#app-switcher) on the left side will only include apps running on the current virtual display. You can switch between apps by tapping on the app icons.
+
 ## Show PowerPoint presentation on virtual displays
 
-Some apps, like Microsoft Office, can display different content on multiple displays. For example, if Tango is mirroring a virtual display, start a PowerPoint presentation will show the presentation at full screen on the virtual display, while the main display shows the presentation controls.
+Android system has a feature that allows apps to show different contents on multiple screens. For example, in Microsoft Office app, starting a PowerPoint presentation will show the presentation in full screen on the second screen, while the main screen shows the controls.
 
-If the app launcher is showing on the virtual display and covers the presentation, you can tap **Back** button in the command bar to close it.
+This feature also works on virtual displays. If Tango is mirroring a virtual display, these apps can show their contents on the virtual display.
+
+If the app launcher is showing on the virtual display and covering the content, you can tap the <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style={{verticalAlign:"middle"}} viewBox="0 0 16 16" ><path fill="currentColor" d="M1.777 9.313a1.5 1.5 0 0 1 0-2.629l9.999-5.499A1.5 1.5 0 0 1 13.999 2.5v10.999a1.5 1.5 0 0 1-2.223 1.314l-9.999-5.5Zm.482-1.752a.5.5 0 0 0 0 .876l9.999 5.499a.5.5 0 0 0 .74-.438V2.499a.5.5 0 0 0-.74-.438l-9.999 5.5Z"></path></svg> button in the command bar to hide it.
 
 ## Create multiple virtual displays
 
-On Desktop platforms, by opening multiple tabs of Tango, multiple virtual displays can be created and mirrored in each tab. Each virtual display is independent and can run different apps. Note that Android apps can't run on multiple virtual displays, but you can run different apps on each of them.
+On Desktop platforms, it's possible to create and mirror multiple virtual displays by opening multiple tabs of Tango. Each virtual display is independent and can run different apps. Note that one Android app can't have multiple instances on different displays, opening an app on one virtual display will close it on other displays.
+
+If the device is shared using a link or Remote Access, each sharing session will also create its own virtual display.

@@ -1,15 +1,14 @@
 .pro {
   display: inline-block;
   margin-right: 8px;
-  height: 16px;
-  line-height: 16px;
-  margin-left: 4px;
+  height: 18px;
+  line-height: 18px;
   vertical-align: middle;
   margin-top: -2px;
   padding-left: 5px;
   padding-right: 4px;
   border-radius: 4px;
-  font-size: 12px;
+  font-size: 14px;
   background-color: #447cf6;
   color: white;
 }

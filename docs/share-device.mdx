@@ -2,19 +2,29 @@
 sidebar_position: 8
 ---
 
-# Share Device
+# Share Device By Link
 
-The share device feature allows you to access the device from another computer or mobile device. This is useful if you want someone else to help you with the device, or if you want to access the device remotely.
+The device sharing feature allows a remote computer to access and control the device. This is useful if you want someone else to help you with the device, or if you want to access the device remotely.
 
 ## Start sharing
 
-To share the device, click the <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style={{verticalAlign:"middle"}} viewBox="0 0 20 20"><path fill="currentColor" d="M4.5 3A1.5 1.5 0 0 0 3 4.5v6A1.5 1.5 0 0 0 4.5 12H6v1H4.5A2.5 2.5 0 0 1 2 10.5v-6A2.5 2.5 0 0 1 4.5 2h6A2.5 2.5 0 0 1 13 4.5v6a2.5 2.5 0 0 1-2.5 2.5H9v-1h1.5a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 10.5 3h-6Zm5 4H11v1H9.5A1.5 1.5 0 0 0 8 9.5v6A1.5 1.5 0 0 0 9.5 17h6a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 15.5 8H14V7h1.5A2.5 2.5 0 0 1 18 9.5v6a2.5 2.5 0 0 1-2.5 2.5h-6A2.5 2.5 0 0 1 7 15.5v-6A2.5 2.5 0 0 1 9.5 7Z"></path></svg> button in the top right corner of the device page. A dialog will appear with some introductions and a **Start** button.
+To create a sharing link, follow these steps:
 
-Click the **Start** button to generate a link that you can share with others.
+1. Switch to the device you want to share
+2. Tap the <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style={{verticalAlign:"middle"}} viewBox="0 0 20 20"><path fill="currentColor" d="M4.5 3A1.5 1.5 0 0 0 3 4.5v6A1.5 1.5 0 0 0 4.5 12H6v1H4.5A2.5 2.5 0 0 1 2 10.5v-6A2.5 2.5 0 0 1 4.5 2h6A2.5 2.5 0 0 1 13 4.5v6a2.5 2.5 0 0 1-2.5 2.5H9v-1h1.5a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 10.5 3h-6Zm5 4H11v1H9.5A1.5 1.5 0 0 0 8 9.5v6A1.5 1.5 0 0 0 9.5 17h6a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 15.5 8H14V7h1.5A2.5 2.5 0 0 1 18 9.5v6a2.5 2.5 0 0 1-2.5 2.5h-6A2.5 2.5 0 0 1 7 15.5v-6A2.5 2.5 0 0 1 9.5 7Z"></path></svg> button in the top right toolbar.
+3. Tap the **Start** button in the popup dialog.
 
-In the whole process, the device must remain plugged in, and Tango must be kept open. If you close Tango or unplug the device, the sharing session will be terminated.
+A share link will appear in the dialog. You can copy the link and send it to the person you want to share the device with.
 
-To stop, click the **Stop** button in the share dialog. It will disconnect all remote browsers that are using this sharing link, and the link will be invalidated. You can start a new sharing session by clicking the **Start** button again.
+The device must remain connected in Tango for the sharing link to work. If you disconnect the device or close the browser tab, the sharing link will be invalidated.
+
+## Stop sharing
+
+To stop, tap the <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style={{verticalAlign:"middle"}} viewBox="0 0 20 20"><path fill="currentColor" d="M4.5 3A1.5 1.5 0 0 0 3 4.5v6A1.5 1.5 0 0 0 4.5 12H6v1H4.5A2.5 2.5 0 0 1 2 10.5v-6A2.5 2.5 0 0 1 4.5 2h6A2.5 2.5 0 0 1 13 4.5v6a2.5 2.5 0 0 1-2.5 2.5H9v-1h1.5a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 10.5 3h-6Zm5 4H11v1H9.5A1.5 1.5 0 0 0 8 9.5v6A1.5 1.5 0 0 0 9.5 17h6a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 15.5 8H14V7h1.5A2.5 2.5 0 0 1 18 9.5v6a2.5 2.5 0 0 1-2.5 2.5h-6A2.5 2.5 0 0 1 7 15.5v-6A2.5 2.5 0 0 1 9.5 7Z"></path></svg> button in the top right toolbar, then tap the **Stop** button in the popup dialog.
+
+Stopping a sharing will immediately disconnect all remote browser tabs that are using this sharing link, and the link will be invalidated.
+
+You can create a new share link by tapping the **Start** button again.
 
 ## Use the link
 
@@ -42,3 +52,5 @@ When the link is opened on another computer or mobile device, a peer-to-peer con
 Depending on the network conditions, the speed and latency of the connection may vary.
 
 In normal usage scenarios, it should only use less than 1Mbps of bandwidth, and the latency is usually not noticeable. However, if the network conditions are poor, some features like file transferring and screen mirroring may not work properly.
+
+At the remote side, you can tap the <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style={{verticalAlign:"middle"}} viewBox="0 0 20 20"><path fill="currentColor" d="M4.5 3A1.5 1.5 0 0 0 3 4.5v6A1.5 1.5 0 0 0 4.5 12H6v1H4.5A2.5 2.5 0 0 1 2 10.5v-6A2.5 2.5 0 0 1 4.5 2h6A2.5 2.5 0 0 1 13 4.5v6a2.5 2.5 0 0 1-2.5 2.5H9v-1h1.5a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 10.5 3h-6Zm5 4H11v1H9.5A1.5 1.5 0 0 0 8 9.5v6A1.5 1.5 0 0 0 9.5 17h6a1.5 1.5 0 0 0 1.5-1.5v-6A1.5 1.5 0 0 0 15.5 8H14V7h1.5A2.5 2.5 0 0 1 18 9.5v6a2.5 2.5 0 0 1-2.5 2.5h-6A2.5 2.5 0 0 1 7 15.5v-6A2.5 2.5 0 0 1 9.5 7Z"></path></svg> button in the top right toolbar to check the latency and bandwidth usage of the connection.
