@@ -1,0 +1,47 @@
+---
+authors: simon
+---
+
+# Move the hosting to Cloudflare and accept Alipay for China users
+
+We are constantly working to improve the user experience and make it easier for everyone to use Tango.
+
+Today, we are happy to announce that we have moved the hosting to Cloudflare and now accept Alipay for China users.
+
+{/* truncate */}
+
+## Cloudflare CDN and edge functions
+
+We have moved the hosting to Cloudflare to provide a faster and more reliable connection for our users across the globe. Not only does Cloudflare provide a CDN network to cache and deliver static assets faster, the edge functions also allow us to handle dynamic API calls closer to you. We know some users had troubles loading Tango in the past, and we hope this change will improve the experience for everyone.
+
+In addition, we have optimized the website code to reduce its size. The updating process now downloads 10% less data, and the update time can be reduced by up to 50%.
+
+In the future, we plan to move our sharing coordination service to Cloudflare as well to improve the device sharing feature. We also plan to add a forward proxy to enable device sharing in network conditions where a direct peer-to-peer connection can't be established. Stay tuned for more updates!
+
+## Accept Alipay for China users
+
+Because of PayPal's restrictions, we were unable to accept payments from China users, plus, PayPal is not a popular payment method in China. To make it easier for China users to purchase Tango, we have added Alipay as a payment method. Now, China users can pay with Alipay directly on our website.
+
+Because we are a startup, Alipay only allows us to accept one-time payments. We will add recurring payments once we meet their requirements.
+
+The free trial works differently for Alipay users: for the first payment, you will be charged immediately, but get one extra month (30 days) for free.
+
+In the future, we plan to also add WeChat Pay for users who prefer that.
+
+## 接受支付宝付款
+
+根据国家外汇管制的要求，我们的 PayPal 账户不支持接收中国用户的付款。现在我们添加了支付宝付款。
+
+支付宝现在只支持单笔付款，我们会在满足支付宝的要求后添加自动续费功能。
+
+使用支付宝付款时免费试用的生效方式和 PayPal 不同：第一次付款会立即扣费，但是会额外赠送一个月（30天）的时长。
+
+我们计划在未来添加微信支付。
+
+## Bug fixes and improvements
+
+We have fixed some bugs and made some improvements:
+
+* Fixed the issue where taking screenshots in screen mirror produces a black image.
+* Updated Scrcpy version to improve compatibility with Android 14 and 15.
+* Added support for AV1 codec in screen mirroring. AV1 provides better compression efficiency than H.264 and VP9, and it is royalty-free. AV1 is supported on Android 14, but as it's new, it may not work on all devices, or it may have performance issues. If your device supports AV1 encoding and your computer supports AV1 decoding, the option will be available in the **Video** section to let you try it out.
