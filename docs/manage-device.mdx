@@ -19,13 +19,27 @@ import ArrowSwap from './arrow-swap.svg';
 
 Then follow the instructions on the screen to pair the device.
 
-## Switch between devices
+## List all paired devices
 
 If multiple devices are available, Tango automatically connects to the most recently used device. You can view and switch between connected devices by clicking the <ArrowSwap/> button on the top left corner, after the device name.
 
 ![Device list dialog](device-list.png)
 
-## Use multiple devices at once
+There are several groups of devices:
+
+### Available devices
+
+These are devices that are currently connected to Tango and available for use. Tap on a device to switch to it.
+
+### Unavailable devices
+
+These are devices that are paired with Tango but are not currently connected. You can't switch to these devices until they are connected, but you can still un-pair them.
+
+### Remote devices
+
+These are devices that are connected to other Tango instances, and being [automatically shared](./remote-access/auto-share.mdx) to the current Tango instance. Tap on a device to switch to it.
+
+## Use multiple devices at the same time
 
 One Tango instance can only control one device at a time. If you want to control multiple devices at once, you can open multiple Tango instances in different tabs or windows.
 
