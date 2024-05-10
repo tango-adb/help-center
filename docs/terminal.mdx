@@ -24,6 +24,12 @@ When you run `adb shell command` on your computer, you run a single command on t
 
 The terminal page in Tango works like `adb shell`, it runs an interactive shell session on the device. If you see a command that starts with `adb shell` and you want to run it in Tango, just remove the `adb shell` part. For example, if you see `adb shell ls`, only type `ls` in the terminal page.
 
+## Other ADB commands
+
+Other ADB commands, like `adb push` or `adb root`, are implemented in Google ADB client. But since Tango doesn't use Google ADB client, these commands are not available here.
+
+For some ADB commands, Tango provides a more user-friendly way to run them. For example, to push files to the device, you can use the **File Browser** page. If the command you need is not available in Tango, you can send a feature request with your use case in our [Discord server](https://discord.gg/26k3ttC2PN).
+
 ## Command bar
 
 The command bar at top of the page has the following buttons:
