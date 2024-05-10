@@ -1,0 +1,32 @@
+---
+sidebar_position: 9
+---
+
+# Terminal
+
+The terminal page allows you to run shell commands on the device. It's same as running `adb shell` command on your computer.
+
+:::danger
+
+Running shell commands on the device can be dangerous. You can easily break your device or lose data. Be careful and only run commands you understand.
+
+:::
+
+## Opening the terminal page
+
+To open the terminal page, first navigate to the **Advanced** page, then tap on the **Open** button in the **Terminal** card.
+
+## Difference between `adb shell` and `adb shell command`
+
+When you run `adb shell` on your computer, you enter an interactive shell session on the device. You can run multiple commands, and the shell session will keep running until you exit it.
+
+When you run `adb shell command` on your computer, you run a single command on the device. The command will run and return the output, then the shell session will exit.
+
+The terminal page in Tango works like `adb shell`, it runs an interactive shell session on the device. If you see a command that starts with `adb shell` and you want to run it in Tango, just remove the `adb shell` part. For example, if you see `adb shell ls`, only type `ls` in the terminal page.
+
+## Command bar
+
+The command bar at top of the page has the following buttons:
+
+* **Fullscreen**: Enters fullscreen mode. In full screen mode, the `Esc` key will be captured and sent to the device. To exit full screen mode, press and hold the `Esc` key for 2 seconds.
+* **Clear**: Clears the terminal output.
