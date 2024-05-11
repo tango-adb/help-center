@@ -30,7 +30,9 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.3.2",
+    "@prettier/plugin-xml": "^3.4.1",
     "@tsconfig/docusaurus": "^2.0.3",
+    "prettier": "^3.2.5",
     "typescript": "^5.4.5"
   },
   "browserslist": {
