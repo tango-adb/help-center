@@ -231,6 +231,7 @@ const config = {
             'https://github.com/tango-adb/help-center/tree/main/',
         },
         blog: {
+          blogSidebarCount: 0,
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.

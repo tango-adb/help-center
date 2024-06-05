@@ -1,0 +1,82 @@
+---
+authors: simon
+---
+
+import ImageCaption from './image-caption'
+
+# Desktop App (beta) released
+
+We are happy to announce the beta release of the Tango Desktop App. The app is available for Windows, macOS, and Linux.
+
+The desktop app is a simple, system-tray only app that starts Google ADB and forwards the connection to Tango Web App. You can still use your favorite browser to access Tango Web App, and the desktop app will automatically connect to it.
+
+{/* truncate */}
+
+## Slim and fast
+
+The desktop app sits in the system tray and only shows a menu when you right-click on it.
+
+It's built with Rust, so it's small (10MB with ADB bundled), fast, and uses very little (around 4MB) memory.
+
+We really don't want to add another 200MB Electron app to your system which uses 1GB of memory!
+
+<ImageCaption width={213} src={require('./context-menu.png').default} caption="Context menu"/>
+
+When the Web app is connected to the Desktop app, it will display an indicator in the footer:
+
+<ImageCaption width={329} src={require('./footer.png').default} caption="Web app footer"/>
+
+## Wireless Connection
+
+Android has supported wireless debugging for a long time, but it uses TCP connections, which is not supported by Web APIs. The desktop app can bridge the TCP connection to WebSocket, so the Web App can connect to devices wirelessly.
+
+Tango Desktop app supports both the new Wireless Debugging feature added in Android 11 and the old ADB over Wi-Fi (TCP/IP mode), with full visual guidance to help you set up the connection.
+
+To add wireless devices, first navigate to the "Add Device" page (https://app.tangoapp.dev/guide), then select the "Wireless" option:
+
+<ImageCaption width={700} src={require('./guide.png').default} caption="Guide page"/>
+
+Then you can choose one of the following methods to pair your device:
+
+<ImageCaption width={700} src={require('./qr-code.png').default} caption="Pair device by scanning QR code"/>
+
+<ImageCaption width={700} src={require('./auto.png').default} caption="Automatically search for devices in pairing mode"/>
+
+If the automatic method doesn't work, you can also enter the IP address, port, and pairing code manually:
+
+<ImageCaption width={700} src={require('./manual.png').default} caption="Enter IP address, port and pairing code manually"/>
+
+To add ADB over Wi-Fi devices, choose the "Wireless (legacy)" option in the "Add Device" page, then there will be two options:
+
+<ImageCaption width={700} src={require('./legacy-enable.png').default} caption="Connect over USB and automatically enable ADB over Wi-Fi"/>
+
+<ImageCaption width={700} src={require('./legacy-connect.png').default} caption="Connect to devices with ADB over Wi-Fi already enabled"/>
+
+## Plug and play
+
+In the Web app, each device has to be added manually, and when USB configuration changes, it needs to be added again. The desktop app can automatically connect to all devices, including USB devices, Wireless Debugging devices, and Android Emulators.
+
+## Enhanced Compatibility
+
+The desktop app connects to devices using ADB, which means it can be used alongside other ADB tools like Android Studio, Scrcpy, etc.
+
+With the desktop app, you can also use Tango in browsers that don't support WebUSB, like Safari and Firefox, although the screen mirroring feature will not work because they lack the necessary APIs.
+
+## Download
+
+You can download the desktop app from https://app.tangoapp.dev/download. Because the Web app is cached in your browser, you might need to wait a few minutes for the new version to be updated.
+
+## Future Plans
+
+Here are some features we are considering:
+
+* Add fallback decoders for Safari and Firefox to enable screen mirroring.
+* Add a standalone version that doesn't require a browser. It will use the built-in browser engine on each platform (WebView2 for Windows, WebKit for Linux, and WKWebView for macOS) so it can still be slim and fast.
+
+## Open Source
+
+The desktop app is open source, you can find the source code on [GitHub](https://github.com/tango-adb/bridge-rs). We welcome contributions and pull requests!
+
+## Conclusion
+
+The desktop app is still in beta, we'd love to hear your feedback and suggestions! You can file issues on GitHub, or join our [Discord server](https://discord.gg/26k3ttC2PN) to chat with us.

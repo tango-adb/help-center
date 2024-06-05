@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["Fullscreen", "Miracast", "PPSSPP"],
+  "cSpell.words": ["Fullscreen", "Miracast", "PPSSPP", "Scrcpy", "wirelessly"],
   "prettier.documentSelectors": ["**/*.svg"],
   "prettier.enableDebugLogs": true,
   "prettier.configPath": "./.prettierrc"
