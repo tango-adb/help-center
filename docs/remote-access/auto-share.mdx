@@ -8,15 +8,11 @@ import Pro from '../_pro.tsx';
 
 <Pro/>
 
-When you log in to Tango on multiple computers, all devices connected to one computer will be automatically shared with other computers. This allows you to access and control the device from any computer without manually creating a sharing link.
+With Pro or Team plan, you can automatically see and use your devices connected another computer, without manually creating share links.
 
 ## Share device
 
-import ChannelShare from './channel-share.svg';
-
-When a device is automatically shared, there will be a <ChannelShare/> icon in the device list:
-
-![Device List dialog](local.png)
+When a device is connected to Tango, it will be automatically shared to other computers signed into the same account. This list is sent securely, no one else can see your devices.
 
 ## Connect to shared device
 
@@ -28,16 +24,14 @@ On computer 1 you can find device A normally. On computer 2, the device A can be
 * If the **Get Started** button takes you to the device paring page, tap the **Show paired devices** link below the **Next** button, then select device A from the list.
 * If there is no **Show paired devices** link, wait for a few seconds as the device list loads. If the device list still doesn't show up, ensure that you have logged in with the same account on both computers.
 
-In the device list, automatically shared devices will be in the **Remote Devices** group, and have a <ChannelShare/> icon next to them.
+In the device list, automatically shared devices will be in the **Remote devices** group.
 
-![Device List dialog](remote.png)
+![Device list with remote devices](remote.png)
 
-import ArrowSwap from '../arrow-swap.svg';
-
-When both computers have devices connected, opening Tango will automatically connect to the local device. To switch to a remote device, click the <ArrowSwap/> button on the top left corner, after the device name, then click the remote device you want to switch to.
+Tap a device to connect to it remotely.
 
 ## Test it before purchasing
 
-Automatic device sharing uses the same peer-to-peer connection as share by link, and we can't guarantee it will work in every network environment.
+Automatic device sharing uses the same peer-to-peer connection as share by link. P2P connections generally doesn't work well in complex network environments, like double NAT.
 
-If you are purchasing the Pro plan solely for this feature, you can check if it works for you by using the [Share Device By Link](./share-link.mdx) feature first. If the Share Device By Link feature works for you, the automatic device sharing feature should work as well.
+If you are purchasing the Pro plan solely for this feature, you can check if it works for you by trying the [Share device by link](./share-link.mdx) feature first. If that works for you, the automatic device sharing feature should also work.

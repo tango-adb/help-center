@@ -4,31 +4,43 @@ sidebar_position: 1
 
 # Introduction
 
-[Tango](https://tangoapp.dev) is a Web app for controlling Android devices. It's built on the open-sourced [Tango library](https://github.com/yume-chan/ya-webadb).
+:::info[Welcome]
+
+Welcome to Tango web app support website! :tada:
+
+Tango can interact with Android devices using ADB ([Android Debug Bridge](https://developer.android.com/studio/command-line/adb)) protocol.
+
+If you are looking for the open-sourced Tango library which enables you to use ADB in your own app, see https://docs.tangoapp.dev.
+
+:::
+
+## Requirements
 
 Tango works on latest versions of Chromium-based browsers, including Google Chrome, Microsoft Edge and Opera. It also works on Android versions of those browsers, but not on iOS devices.
 
+## Features
+
+* [**Device Overview**](./features/overview.mdx): Display basic information of the device like IP address, battery level, storage and memory usages.
+* **Clipboard tools**: Read and write device clipboard using multiple methods.
+* [**File Browser**](./features/file-browser.mdx): Browse, download and upload files on device.
+* [**App Manager**](./features/app-manager.mdx): List, install and uninstall apps on device.
+* [**Screen Mirror**](./features/screen-mirror/index.mdx): Mirror device screen and control the device using mouse and keyboard.
+* Logcat and bugreport tools for debugging the device or apps on it.
+* [**ADB shell**](./features/terminal.mdx): Execute shell commands on the device.
+* More features are coming soon.
+
 ## Data security
 
-Tango works entirely in your browser. All data is transferred directly between your device and your browser. Besides of some anonymous analytics data, Tango doesn't send any data to the server.
+Tango works entirely in your browser. All data is transferred directly between your device and your browser. Besides of some anonymous analytics data, Tango doesn't send any data to any web servers.
 
-After first loading the page, Tango can work offline. You can disconnect from the Internet and continue using Tango.
+After loading the page, Tango can work offline. You can disconnect from the Internet and continue using Tango.
 
 ## Quick Start
 
 1. [Enable Developer options and USB debugging](./prepare.mdx) on the device you want to control.
 2. Connect the device to your computer using a USB cable. For running Tango on Android, use a C-to-C or OTG cable, Tango can't control the device from itself.
-3. Open [Tango](https://tangoapp.dev) in a supported browser on your computer.
-4. Follow on-screen instructions to pair the device. If the device is not detected, make sure you have enabled USB debugging and connected the device to your computer.
+3. Open [Tango](https://app.tangoapp.dev) in a supported browser on your computer.
+4. Follow on-screen instructions to pair the device. If the device is not detected, make sure you have enabled USB debugging and connected the device to your computer using a quality USB cable.
 5. The first time you connect to a device, you will be asked to authorize the connection on the device. Follow the instructions on the device.
 
 Having issues while connecting? See [Troubleshooting](./troubleshooting.mdx).
-
-## Features
-
-* [**Device Overview**](./overview.mdx): Display basic information of the device like IP address, battery level, storage and memory usages.
-* [**File Browser**](./file-browser.mdx): Browse, download and upload files on device.
-* [**App Manager**](./app-manager.mdx): List, install and uninstall apps on device.
-* [**Screen Mirror**](./screen-mirror/index.mdx): Mirror device screen and control the device using mouse and keyboard.
-* Logcat and bugreport tools for debugging the device or apps on it.
-* More features are coming soon.

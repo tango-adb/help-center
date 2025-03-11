@@ -1,12 +1,24 @@
-import React from 'react';
+import React from "react";
 
-import styles from './_pro.module.css';
+import styles from "./_pro.module.css";
 
-export default function Pro({ feature }: { feature?: string }) {
+export default function Pro({
+  feature,
+  team,
+}: {
+  feature?: string;
+  team?: boolean;
+}) {
   return (
     <p>
-      <span className={styles.pro}>Pro</span>
-      <span>{feature ?? "This feature"} requires Pro or a higher plan.</span>
+      <span className={styles.pro}>{team ? "Team" : "Pro"}</span>
+      <span>
+        <span>{feature ?? "This feature"} requires </span>
+        <a target="_blank" href="https://app.tangoapp.dev/pricing">
+          {team ? "Team plan" : "Pro or higher plan"}
+        </a>
+        <span>.</span>
+      </span>
     </p>
   );
 }

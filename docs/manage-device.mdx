@@ -2,9 +2,11 @@
 sidebar_position: 3
 ---
 
-# Device Management
+# Device management
 
-Due to security restrictions, Tango can't automatically detect devices connected to your computer. You must manually pair each device you want to control.
+import FluentAdd20Regular from '~icons/fluent/add-20-regular';
+
+Due to security restrictions, Tango can't automatically detect devices connected to your computer. Devices need to be added one by one.
 
 The first time you open Tango, you will see the instructions for pairing a device. From next time, if you open Tango with a device connected, it will automatically connect to that device.
 
@@ -14,8 +16,8 @@ If you have another device you want to use with Tango, follow these steps:
 
 import ArrowSwap from './arrow-swap.svg';
 
-* If Tango has already connected to a device, click the <ArrowSwap/> button on the top left corner, after the device name. Then click **Pair another device**.
-* If you are on the **All devices are unavailable** page, click the **Pair another device** button.
+* If Tango has already connected to a device, click the <ArrowSwap/> button on the top left corner, after the device name. Then click the <FluentAdd20Regular/> button.
+* If you are on the **All devices are unavailable** page, click the **Add device** button.
 
 Then follow the instructions on the screen to pair the device.
 
@@ -27,9 +29,9 @@ If multiple devices are available, Tango automatically connects to the most rece
 
 There are several groups of devices:
 
-### Available devices
+### Local devices
 
-These are devices that are currently connected to Tango and available for use. Tap on a device to switch to it.
+These are devices that are currently connected to the computer and available for use. Tap on a device to switch to it.
 
 ### Unavailable devices
 
@@ -37,16 +39,43 @@ These are devices that are paired with Tango but are not currently connected. Yo
 
 ### Remote devices
 
+import Pro from './_pro';
+
+<Pro/>
+
 These are devices that are connected to other Tango instances, and being [automatically shared](./remote-access/auto-share.mdx) to the current Tango instance. Tap on a device to switch to it.
+
+### Team devices
+
+<Pro team/>
+
+These are devices that shared by other team members. Tap on a device to switch to it.
+
+## Open a device in multiple tabs
+
+Not available when running Tango on Android.
+
+On computers, you can open multiple Tango tabs to use the same device.
+
+This is useful when you want to use multiple features at once, for example, using the file browser to upload files while using the screen mirror to test the app.
 
 ## Use multiple devices at the same time
 
-One Tango instance can only control one device at a time. If you want to control multiple devices at once, you can open multiple Tango instances in different tabs or windows.
+<Pro/>
 
-On computers, you can also open multiple Tango instances to use the same device. This is useful when you want to use multiple features at once, for example, using the file browser to upload files while using the screen mirror to test the app. However, this feature is not available when running Tango on Android.
+With Pro plan, you can open up to 5 devices in multiple Tango tabs.
+
+With Team plan, the number of devices is unlimited.
 
 ## Un-pair a device
 
-If you don't want to use a device with Tango anymore, you can un-pair it. To do this, click the <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style={{verticalAlign:"middle"}} viewBox="0 0 20 20"><path fill="currentColor" d="M12.146 3.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L14.293 7H4.5a.5.5 0 0 1 0-1h9.793l-2.147-2.146a.5.5 0 0 1 0-.708Zm-4.292 7a.5.5 0 0 1 0 .708L5.707 13H15.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0Z"/></svg> button on the top left corner, after the device name, hover on the device you want to un-pair, then click the <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" style={{verticalAlign:"middle",color:"red"}} viewBox="0 0 20 20"><path fill="currentColor" d="M8.5 4h3a1.5 1.5 0 0 0-3 0Zm-1 0a2.5 2.5 0 0 1 5 0h5a.5.5 0 0 1 0 1h-1.054l-1.194 10.344A3 3 0 0 1 12.272 18H7.728a3 3 0 0 1-2.98-2.656L3.554 5H2.5a.5.5 0 0 1 0-1h5ZM5.741 15.23A2 2 0 0 0 7.728 17h4.544a2 2 0 0 0 1.987-1.77L15.439 5H4.561l1.18 10.23ZM8.5 7.5A.5.5 0 0 1 9 8v6a.5.5 0 0 1-1 0V8a.5.5 0 0 1 .5-.5ZM12 8a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V8Z"/></svg> button.
+import FluentDelete20Regular from '~icons/fluent/delete-20-regular';
+import FluentMoreHorizontal20Regular from '~icons/fluent/more-horizontal-20-regular';
+
+If you don't want to use a device with Tango anymore, you can un-pair it.
+
+1. Tap the <ArrowSwap/> button on the top left corner, after the device name, to open the device list
+2. Tap the <FluentMoreHorizontal20Regular/> button for the device you want to un-pair
+3. Tap the <FluentDelete20Regular style={{verticalAlign:"middle",color:"red"}}/> **Remove** menu item.
 
 You can't un-pair the device you are currently using. To un-pair it, first switch to another device (or switch to the pairing process), then un-pair it.

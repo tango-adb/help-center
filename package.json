@@ -15,25 +15,31 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "3.3.2",
-    "@docusaurus/preset-classic": "3.3.2",
-    "@docusaurus/theme-classic": "^3.3.2",
-    "@docusaurus/theme-mermaid": "^3.3.2",
-    "@docusaurus/types": "^3.3.2",
-    "@easyops-cn/docusaurus-search-local": "^0.40.1",
-    "@mdx-js/react": "^3.0.1",
-    "@types/node": "^20.12.10",
+    "@docusaurus/core": "3.7.0",
+    "@docusaurus/preset-classic": "3.7.0",
+    "@docusaurus/theme-classic": "^3.7.0",
+    "@docusaurus/theme-mermaid": "^3.7.0",
+    "@docusaurus/types": "^3.7.0",
+    "@easyops-cn/docusaurus-search-local": "^0.48.5",
+    "@mdx-js/react": "^3.1.0",
+    "@types/node": "^22.13.10",
     "clsx": "^2.1.1",
-    "prism-react-renderer": "^2.3.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "prism-react-renderer": "^2.4.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.3.2",
+    "@docusaurus/module-type-aliases": "3.7.0",
+    "@iconify-json/fluent": "^1.2.15",
     "@prettier/plugin-xml": "^3.4.1",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
     "@tsconfig/docusaurus": "^2.0.3",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.5"
+    "@types/react": "^19.0.10",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "unplugin-auto-import": "^19.1.1",
+    "unplugin-icons": "^22.1.0"
   },
   "browserslist": {
     "production": [
