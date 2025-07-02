@@ -148,12 +148,20 @@ const config = {
             items: [
               {
                 label: "Tango Web App",
-                href: "https://app.tangoapp.dev",
+                href: "https://tangoapp.dev",
               },
               {
-                label: "OpenCollective",
+                label: "Sponsor us on OpenCollective",
                 href: "https://opencollective.com/ya-webadb",
               },
+              {
+                label: "Source code of Tango ADB library",
+                href: "https://github.com/yume-chan/ya-webadb"
+              },
+              {
+                label: "Source code of this website",
+                href: "https://github.com/tango-adb/help-center"
+              }
             ],
           },
           {
@@ -164,12 +172,16 @@ const config = {
                 href: "https://github.com/yume-chan/ya-webadb",
               },
               {
-                label: "Reddit",
-                href: "https://www.reddit.com/r/tango_adb",
+                label: "Discord",
+                href: "https://tangoadb.dev/discord",
               },
               {
-                label: "Discord",
-                href: "https://discord.gg/26k3ttC2PN",
+                label: "WeChat",
+                href: "https://tangoadb.dev/wechat",
+              },
+              {
+                label: "Reddit",
+                href: "https://www.reddit.com/r/tango_adb",
               },
             ],
           },
